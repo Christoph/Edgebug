@@ -11,7 +11,7 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem "rspec-rails", :version => '=1.2.7.1'
+  config.gem "rspec-rails", :version => '=1.2.9', :lib => 'spec/rails'
   config.gem "cucumber", :version => '=0.3.104'
   config.gem "webrat", :version => '=0.5.3'
   config.gem "sqlite3-ruby", :lib => "sqlite3", :version => '=1.2.5'
