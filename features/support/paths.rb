@@ -18,8 +18,9 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     else
-      raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
-        "Now, go and add a mapping in #{__FILE__}"
+			"/#{page_name.gsub("\"", "")}"
+#      raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+#        "Now, go and add a mapping in #{__FILE__}"
     end
   end
 end

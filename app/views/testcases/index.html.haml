@@ -1,0 +1,17 @@
+%h1 Listing testcases
+
+%table
+  %tr
+    %th Title
+
+- for testcase in @testcases
+  %tr
+    %td= testcase.title
+
+    %td= link_to 'Show', testcase
+    %td= link_to 'Edit', edit_testcase_path(testcase)
+    %td= link_to 'Destroy', testcase, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New testcase', new_testcase_path

@@ -1,0 +1,13 @@
+%h1 New testcase
+
+- form_for(@testcase) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+
+  %p= f.submit "Create"
+
+= link_to 'Back', testcases_path
