@@ -85,7 +85,7 @@ describe TestcasesController do
       it "should redirect to the created testcase" do
         Testcase.stub!(:new).and_return(@new_testcase)
         post :create, :testcase => {}
-        response.should redirect_to(testcase_url(@new_testcase))
+        response.should redirect_to(testcases_url)
       end
       
     end
