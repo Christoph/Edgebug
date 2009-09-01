@@ -8,3 +8,6 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+desc "Runs feature definition tests and specification tests"
+task :default => [:cucumber] #adding cucumber to the default task
