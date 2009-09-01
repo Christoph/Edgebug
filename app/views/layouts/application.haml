@@ -1,0 +1,14 @@
+!!!
+
+%html
+  %head
+    %title Edgebug
+    = stylesheet_link_tag "main.css"
+
+  %body
+    %div#header
+      = render :partial => "layouts/header"
+    %div#main
+      = yield :layout
+    %div#footer
+      = render :partial => "layouts/footer"
