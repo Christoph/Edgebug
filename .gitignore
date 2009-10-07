@@ -1,11 +1,7 @@
-config/database.yml
-config/deploy.rb
-config/settings.yml
-config/newrelic.yml
 db/*.sqlite3
-db/schema.rb
 public/system
 public/coverage
 public/features_rcov
 public/javascripts/js_all.js
 public/stylesheets/styles_all.css
+*.log
