@@ -1,17 +1,15 @@
+
+%style .testcase_title{ font-weight: bold; font-size: 1.2em }
+
 %h1 Listing testcases
 
-%table
-  %tr
-    %th Title
+=link_to 'New testcase', new_testcase_path
 
-- for testcase in @testcases
-  %tr
-    %td= testcase.title
-
-    %td= link_to 'Show', testcase
-    %td= link_to 'Edit', edit_testcase_path(testcase)
-    %td= link_to 'Destroy', testcase, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New testcase', new_testcase_path
+%ul
+  - for testcase in @testcases
+    %li 
+      %div{:class => 'testcase_title'}= testcase.title
+      %div
+        %div= link_to 'Show', testcase
+        %div= link_to 'Edit', edit_testcase_path(testcase)
+        %div= link_to 'Destroy', testcase, :confirm => 'Are you sure?', :method => :delete
