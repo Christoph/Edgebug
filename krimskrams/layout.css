@@ -1,0 +1,19 @@
+div.box {
+ clear: both;
+ padding: 10px;
+ margin: 10px 20px;
+ border: 1px solid #123123;
+ vertical-align: middle;
+}
+
+div.box img {
+ float: left;
+ display: block;
+ margin-right: 10px;
+}
+
+div.box p {
+ margin-top: 5px;
+ display: block;
+ height: 40px;
+}

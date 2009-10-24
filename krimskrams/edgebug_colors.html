@@ -1,7 +1,17 @@
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>Edgebug stylesheet sample page</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	</head>
+
 	<style>
 		@import "colors.css";
 		@import "typo.css";
+		@import "layout.css";
 		
 		.colorbox {
 			width: 100px;
@@ -18,6 +28,7 @@
 			margin-left: 150px;
 		}
 	</style>
+	
 	<body>
 		<div class="colorinfo">
 			<div class="colorbox base_green_bg">
@@ -26,6 +37,16 @@
 				<h2>Base green.</h2>
 				<p>Use for:</p>
 				<p>CSS classes: <code>base_green</code>, <code>base_green_bg</code></p>
+			</div>
+		</div>
+		
+		<div class="colorinfo">
+			<div class="colorbox light_green_bg">
+			</div>
+			<div class="colordesc">
+				<h2>Light green.</h2>
+				<p>Use for: backgrounds</p>
+				<p>CSS classes: <code>light_green</code>, <code>light_green_bg</code></p>
 			</div>
 		</div>
 		
@@ -110,6 +131,16 @@ fac(N) -> N * fac(N-1).
 % Recursively determine, then return the result 
 % (note the period . meaning 'endif' or 'function end')</code>
 
+
+<h3>Code nested in a paragraph:</h3>
+		<p><code>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+ 
+fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+fac(N) -> N * fac(N-1). 
+% Recursively determine, then return the result 
+% (note the period . meaning 'endif' or 'function end')</code></p>
+
 <h3>Preformatted text (&lt;pre&gt;):</h3>
 		<pre>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
 -export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
@@ -119,20 +150,40 @@ fac(N) -> N * fac(N-1).
 % Recursively determine, then return the result 
 % (note the period . meaning 'endif' or 'function end')</pre>
 
-<h3>Lists:</h3>
-<ol>
-	<li>First!</li>
-	<li>2<sup>nd</sup></li>
-</ol>
+<h3>Preformatted text nested in a paragraph:</h3>
+		<p><pre>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+ 
+fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+fac(N) -> N * fac(N-1). 
+% Recursively determine, then return the result 
+% (note the period . meaning 'endif' or 'function end')</pre></p>
 
-<ul>
-	<li>First!</li>
-	<li>2<sup>nd</sup></li>
-	<ul>
-		<li>Subitem</li>
-		<li>I love morse code.</li>
-	</ul>
-</ul>
+		<h3>Lists:</h3>
+		<ol>
+			<li>First!</li>
+			<li>2<sup>nd</sup></li>
+		</ol>
 
+		<ul>
+			<li>First!</li>
+			<li>2<sup>nd</sup></li>
+			<ul>
+				<li>Subitem</li>
+				<li>I love morse code.</li>
+			</ul>
+		</ul>
+
+		<div class="box">
+			<img src="preferences-systems.png" alt="Icon" />
+			<p>This is a div using the <q>box</q> class. The image has a height of <b>60px</b>.</p>
+		</div>
+		
+		<div class="box action_yellow_bg">
+			<img src="preferences-systems.png" alt="Icon" />
+			<p>You can also add other CSS classes like <code>action_yellow_bg</code> to specify the background colour.<br />
+			Always use &lt;br /&gt; to make a line break. Do not add another <br />
+			paragraph, because this breaks the rendering.</p>
+		</div>
 	</body>
 </html>
