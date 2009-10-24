@@ -17,3 +17,8 @@ div.box p {
  display: block;
  height: 40px;
 }
+
+div#main_container {
+ width: 1000px;
+ margin: 5px auto;
+}
