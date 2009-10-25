@@ -10,7 +10,7 @@ require 'rake/rdoctask'
 require 'tasks/rails'
 
 desc "Runs feature definition tests and specification tests"
-task :default => [:cucumber] #adding cucumber to the default task
+task :default => [Rake::Task['db:migrate'], :cucumber] #adding cucumber to the default task
 
 desc "Starts the server and does necessary stuff"
 task :start => [Rake::Task['db:migrate'], :touch_logs] do
