@@ -30,6 +30,10 @@ pre, code {
  line-height: 130%;
 }
 
+p code {
+ line-height: 100%;
+}
+
 p, span, div, td, th, li {
  font-family: Helvetica, Arial, sans-serif;
  font-size: 0.93em;
