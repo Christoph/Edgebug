@@ -1,9 +1,10 @@
 div.box {
  clear: both;
  padding: 10px;
- margin: 10px 20px;
+ margin: 10px auto;
  border: 3px solid #859132;
  vertical-align: middle;
+ width: 700px;
 }
 
 div.box img {
@@ -53,4 +54,23 @@ div#footer {
 div.clear_all {
  clear: both;
  height: 0px;
+}
+
+table {
+ margin: 10px auto;
+ border-collapse: collapse;
+ border: 3px solid #859132;
+}
+
+th, td {
+ padding: 7px 9px;
+ border: 1px solid #859132;
+}
+
+a:link {
+ color: #173680;
+}
+
+a:visited {
+ color: #a40000;
 }
