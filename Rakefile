@@ -9,8 +9,16 @@ require 'rake/rdoctask'
 
 require 'tasks/rails'
 
+Rake::Task['default'].clear #clear the task so that the db migration is really called first
+
 desc "Runs feature definition tests and specification tests"
-task :default => [Rake::Task['db:migrate'], :cucumber] #adding cucumber to the default task
+task :default do
+	Rake::Task["gems:install"].invoke 
+	Rake::Task["db:migrate"].invoke 
+  Rake::Task["db:test:prepare"].invoke 
+  Rake::Task["spec"].invoke 
+  Rake::Task["cucumber"].invoke 
+end
 
 desc "Starts the server and does necessary stuff"
 task :start => [Rake::Task['db:migrate'], :touch_logs] do
