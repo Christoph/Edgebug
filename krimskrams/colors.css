@@ -6,6 +6,14 @@
  background: #bed286;
 }
 
+.light_green {
+ color: #ebffb8;
+}
+
+.light_green_bg {
+ background: #ebffb8;
+}
+
 .dark_green {
  color: #859132;
 }
@@ -15,27 +23,35 @@
 }
 
 .dark {
- color: #242224;
+ color: #1d1d1d;
 }
 
 .dark_bg {
- background: #242224;
+ background: #1d1d1d;
+}
+
+.aluminium {
+ color: #d3d7cf
+}
+
+.aluminium_bg {
+ background: #d3d7cf
 }
 
 .action_yellow {
- color: #ebe987;
+ color: #fff58c;
 }
 
 .action_yellow_bg {
- background: #ebe987;
+ background: #fff58c;
 }
 
 .blueish_green {
- color: #7da88c;
+ color: #a1e2b3;
 }
 
 .blueish_green_bg {
- background: #7da88c;
+ background: #a1e2b3;
 }
 
 .red {

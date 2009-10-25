@@ -1,7 +1,17 @@
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>Edgebug stylesheet sample page</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	</head>
+
 	<style>
 		@import "colors.css";
 		@import "typo.css";
+		@import "layout.css";
 		
 		.colorbox {
 			width: 100px;
@@ -18,82 +28,214 @@
 			margin-left: 150px;
 		}
 	</style>
+	
 	<body>
-		<div class="colorinfo">
-			<div class="colorbox base_green_bg">
+		<div id="main_container">
+			<div id="header" class="base_green_bg">
+				Edgebug <code>beta</code>
 			</div>
-			<div class="colordesc">
-				<h2>Base green.</h2>
-				<p>Use for:</p>
-				<p>CSS classes: <code>base_green</code>, <code>base_green_bg</code></p>
+			
+			<div id="content_container">
+			<div class="colorinfo">
+				<div class="colorbox base_green_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Base green.</h2>
+					<p>Use for:</p>
+					<p>CSS classes: <code>base_green</code>, <code>base_green_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox light_green_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Light green.</h2>
+					<p>Use for: backgrounds</p>
+					<p>CSS classes: <code>light_green</code>, <code>light_green_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox dark_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Dark.</h2>
+					<p>Use for: font color, borders, everything dark.</p>
+					<p>CSS classes: <code>dark</code>, <code>dark_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox dark_green_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Dark green.</h2>
+					<p>Use for: .</p>
+					<p>CSS classes: <code>dark_green</code>, <code>dark_green_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox aluminium_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Aluminium.</h2>
+					<p>Use for: .</p>
+					<p>CSS classes: <code>aluminium</code>, <code>aluminium_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox action_yellow_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Action yellow.</h2>
+					<p>Use for: background of boxes that let you perform an action or boxes that confirm, something was done. Also good for "note:"-boxes or similar</p>
+					<p>CSS classes: <code>action_yellow</code>, <code>action_yellow_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox blueish_green_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Blueish green.</h2>
+					<p>Use for: </p>
+					<p>CSS classes: <code>blueish_green</code>, <code>blueish_green_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox red_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Red.</h2>
+					<p>Use for: </p>
+					<p>CSS classes: <code>red</code>, <code>red_bg</code></p>
+				</div>
+			</div>
+			
+			<div class="colorinfo">
+				<div class="colorbox dark_red_bg">
+				</div>
+				<div class="colordesc">
+					<h2>Dark red.</h2>
+					<p>Use for: </p>
+					<p>CSS classes: <code>dark_red</code>, <code>dark_red_bg</code></p>
+				</div>
+			</div>
+			
+			<h1>Headline 1</h1>
+			<h2>Headline 2</h2>
+			<h3>Headline 3</h3>
+			<h4>Headline 4</h4>
+			<h5>Headline 5</h5>
+			<h6>Headline 6</h6>
+			<p>A paragraph. With<br />some<br />breaks.<p>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			
+			<h3>Code formatting (&lt;code&gt;):</h3>
+			<code>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+	-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+	 
+	fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+	fac(N) -> N * fac(N-1). 
+	% Recursively determine, then return the result 
+	% (note the period . meaning 'endif' or 'function end')</code>
+
+
+	<h3>Code nested in a paragraph:</h3>
+			<p><code>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+	-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+	 
+	fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+	fac(N) -> N * fac(N-1). 
+	% Recursively determine, then return the result 
+	% (note the period . meaning 'endif' or 'function end')</code></p>
+
+<h3>Preformatted text (&lt;pre&gt;):</h3>
+		<pre>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+ 
+fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+fac(N) -> N * fac(N-1). 
+% Recursively determine, then return the result 
+% (note the period . meaning 'endif' or 'function end')</pre>
+
+<h3>Preformatted text nested in a paragraph:</h3>
+		<p><pre>-module(fact).    % This is the file 'fact.erl', the module and the filename MUST match 
+-export([fac/1]). % This exports the function 'fac' of arity 1 (1 parameter, no type, no name)
+ 
+fac(0) -> 1; % If 0, then return 1, otherwise (note the semicolon ; meaning 'else')
+fac(N) -> N * fac(N-1). 
+% Recursively determine, then return the result 
+% (note the period . meaning 'endif' or 'function end')</pre></p>
+
+			<h3>Lists:</h3>
+			<ol>
+				<li>First!</li>
+				<li>2<sup>nd</sup></li>
+			</ol>
+
+			<ul>
+				<li>First!</li>
+				<li>2<sup>nd</sup></li>
+				<ul>
+					<li>Subitem</li>
+					<li>I love morse code.</li>
+				</ul>
+			</ul>
+
+			<div class="box">
+				<img src="preferences-systems.png" alt="Icon" />
+				<p>This is a div using the <q>box</q> class. The image has a height of <b>60px</b>.</p>
+			</div>
+			
+			<div class="box action_yellow_bg">
+				<img src="preferences-systems.png" alt="Icon" />
+				<p>You can also add other CSS classes like <code>action_yellow_bg</code> to specify the background colour.<br />
+				Always use &lt;br /&gt; to make a line break. Do not add another <br />
+				paragraph, because this breaks the rendering.</p>
+			</div>
+			
+			<table> 
+				<tr> 
+					<th class="light_green_bg">Governor</th> 
+					<th class="light_green_bg">Gubernatorial term</th> 
+					<th class="light_green_bg">Date of birth</th> 
+				</tr> 
+				<tr> 
+					<td><a href="/wiki/Jerry_Brown" title="Jerry Brown">Edmund Gerald "Jerry" Brown, Jr.</a></td> 
+					<td>1975&mdash;1983</td> 
+					<td>April 7, 1938 <span>(age&#160;71)</span></td> 
+				</tr> 
+				<tr> 
+					<td class="light_green_bg"><a href="/wiki/George_Deukmejian" title="George Deukmejian">George Deukmejian</a></td> 
+					<td class="light_green_bg">1983&mdash;1991</td> 
+					<td class="light_green_bg">July 6, 1928 <span>(age&#160;81)</span></td> 
+				</tr> 
+				<tr> 
+					<td><a href="/wiki/Pete_Wilson" title="Pete Wilson">Pete Wilson</a></td> 
+					<td>1991&mdash;1999</td> 
+					<td>August 23, 1933 <span>(age&#160;76)</span></td> 
+				</tr> 
+				<tr> 
+					<td class="light_green_bg"><a href="/wiki/Gray_Davis" title="Gray Davis">Joseph Graham "Gray" Davis, Jr.</a></td> 
+					<td class="light_green_bg">1999&mdash;2003</td> 
+					<td class="light_green_bg">December 26, 1942 <span>(age&#160;66)</span></td> 
+				</tr> 
+			</table>
+			
+			<div class="clear_all"></div>
+			<p>This is a standard <a href="http://www.asdf.org">link</a>. And this one should've <q>visited</q> by you before: <a href="http://www.google.com">Goooooooogle.</a></p>
+			<div id="footer">
+			&copy; 2009 &ndash; 3030 Blahblah Inc. &nbsp;&nbsp;&nbsp; Terms of use &nbsp;&nbsp;&nbsp; Need help?
 			</div>
 		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox dark_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Dark.</h2>
-				<p>Use for: font color, borders, everything dark.</p>
-				<p>CSS classes: <code>dark</code>, <code>dark_bg</code></p>
-			</div>
 		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox dark_green_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Dark green.</h2>
-				<p>Use for: .</p>
-				<p>CSS classes: <code>dark_green</code>, <code>dark_green_bg</code></p>
-			</div>
-		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox action_yellow_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Action yellow.</h2>
-				<p>Use for: background of boxes that let you perform an action or boxes that confirm, something was done. Also good for "note:"-boxes or similar</p>
-				<p>CSS classes: <code>action_yellow</code>, <code>action_yellow_bg</code></p>
-			</div>
-		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox blueish_green_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Blueish green.</h2>
-				<p>Use for: </p>
-				<p>CSS classes: <code>blueish_green</code>, <code>blueish_green_bg</code></p>
-			</div>
-		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox red_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Red.</h2>
-				<p>Use for: </p>
-				<p>CSS classes: <code>red</code>, <code>red_bg</code></p>
-			</div>
-		</div>
-		
-		<div class="colorinfo">
-			<div class="colorbox dark_red_bg">
-			</div>
-			<div class="colordesc">
-				<h2>Dark red.</h2>
-				<p>Use for: </p>
-				<p>CSS classes: <code>dark_red</code>, <code>dark_red_bg</code></p>
-			</div>
-		</div>
-		
-		<h1>Headline 1</h1>
-		<h2>Headline 2</h2>
-		<h3>Headline 3</h3>
-		<h4>Headline 4</h4>
-		<h5>Headline 5</h5>
-		<h6>Headline 6</h6>
 	</body>
 </html>
