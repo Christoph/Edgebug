@@ -1,9 +1,14 @@
+@import colors.sass
+
 div
   &.box
     clear: both
     padding: 10px
     margin: 10px auto
-    border: 3px solid #859132
+    border: 
+      width: 3px
+      style: solid
+      color = !DARK_GREEN
     vertical-align: middle
     width: 700px
 
@@ -21,7 +26,10 @@ div
     width: 1000px
     padding: 20px
     margin: 5px auto
-    border: 5px solid #bed286
+    border:
+      width: 5px
+      style: solid
+      color = !BASE_GREEN
     background: white
 
   &#content_container
@@ -29,7 +37,7 @@ div
 
 
 body
-  background: #ebffb8
+  background = !LIGHT_GREEN
 
 
 div
@@ -39,9 +47,13 @@ div
     vertical-align: middle
     font-size: 1.8em
     padding: 5px
+    background = !BASE_GREEN
 
   &#footer
-    border-top: 1px solid #1d1d1d
+    border-top:
+      width: 1px
+      style: solid
+      color = !DARK
     padding-top: 5px
     margin-top: 15px
     font-size: 0.8em
@@ -55,12 +67,18 @@ div
 table
   margin: 10px auto
   border-collapse: collapse
-  border: 3px solid #859132
+  border: 
+    width: 3px 
+    style: solid 
+    color = !DARK_GREEN
 
 
 th, td
   padding: 7px 9px
-  border: 1px solid #859132
+  border:
+    width: 1px
+    style: solid
+    color = !DARK_GREEN
 
 
 a
@@ -68,4 +86,4 @@ a
     color: #173680
 
   &:visited
-    color: #a40000
+    color = !DARK_RED

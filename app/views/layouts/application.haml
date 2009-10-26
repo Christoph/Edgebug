@@ -3,13 +3,13 @@
 %html
   %head
     %title Edgebug
-    = stylesheet_link_tag "colors.css"
     = stylesheet_link_tag "typo.css"
     = stylesheet_link_tag "layout.css"
+    = stylesheet_link_tag "testcase.css"
 
   %body
     #main_container
-      #header.base_green_bg
+      #header
         = render :partial => "layouts/header"
       #content_container
         = yield :layout

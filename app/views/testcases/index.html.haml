@@ -1,13 +1,5 @@
 
 %h1 Listing testcases
 
-=link_to 'New testcase', new_testcase_path
-
-%ul
-  - for testcase in @testcases
-    %li 
-      %div{:class => 'testcase_title'}= testcase.title
-      %div
-        %div= link_to 'Show', testcase
-        %div= link_to 'Edit', edit_testcase_path(testcase)
-        %div= link_to 'Destroy', testcase, :confirm => 'Are you sure?', :method => :delete
+= link_to 'New testcase', new_testcase_path
+= render :partial => 'testcase', :collection => @testcases

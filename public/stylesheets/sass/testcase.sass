@@ -1,0 +1,39 @@
+@import colors.sass
+
+=status_cell
+  float: left
+  width: 2%
+  height: 100%
+
+.testcase_list_element
+  border: 1px solid red
+  width: 90%
+  margin: 10px auto
+  padding: 3px
+  height: 3em
+
+  .title_cell
+    font-size: 1.5em
+    vertical-align: middle
+    float: left
+    width: 70%
+    margin-left: 10px
+    height: 100%
+
+  .info_cell
+    float: left
+    width: 25%
+    margin-left: 10px
+    height: 100%
+
+  .status_cell_failure
+    +status_cell
+    background = !RED
+
+  .status_cell_success
+    +status_cell
+    background = !BASE_GREEN
+
+  .status_cell_pending
+    +status_cell
+    background = !ALUMINIUM
