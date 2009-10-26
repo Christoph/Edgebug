@@ -1,5 +1,5 @@
 .test_step
   %h2 Step ##
-  = fields_for "steps[step_attributes][]", step do |step_form|
+  - fields_for "steps[step_attributes][]", step do |step_form|
     = step_form.text_area :description
   

@@ -8,7 +8,12 @@
     %br
     = f.text_field :title
 
-    = render :partial => 'step', :collection => @testcase.steps
+    #steps
+      = render :partial => 'step', :collection => @testcase.steps
+
+    #steps_menu
+      = link_to_function "Add a step" do |page|
+        - page.insert_html :bottom, :steps, :partial => 'step', :object => Step.new
 
   %p= f.submit "Create"
 
