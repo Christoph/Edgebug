@@ -8,6 +8,10 @@
     %br
     = f.text_field :title
 
+  - for step in @testcase.steps
+    - fields_for "steps[step_attributes][]", step do |step_form|
+      = step_form.text_field :description
+
   %p= f.submit "Create"
 
 = link_to 'Back', testcases_path
