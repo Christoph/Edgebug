@@ -7,3 +7,4 @@ public/stylesheets/styles_all.css
 *.swp
 *.log
 tmp
+*.css
