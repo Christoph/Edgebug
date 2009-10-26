@@ -6,3 +6,4 @@ public/javascripts/js_all.js
 public/stylesheets/styles_all.css
 *.swp
 *.log
+tmp
