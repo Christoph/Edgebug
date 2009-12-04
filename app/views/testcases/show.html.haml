@@ -1,7 +1,7 @@
-%p
-  %b Title:
-  =h @testcase.title
+%h1
+  = @testcase.title
 
+= render :partial => 'show_step', :collection => @testcase.steps
 
 = link_to 'Edit', edit_testcase_path(@testcase)
 |
