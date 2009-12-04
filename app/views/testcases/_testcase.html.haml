@@ -1,6 +1,6 @@
 .testcase_list_element
   %div{ :class => "status_cell_#{testcase.status}" }
   .title_cell
-    = testcase.title
+    = link_to testcase.title, :action => 'show', :id => testcase
   .info_cell
     Info
