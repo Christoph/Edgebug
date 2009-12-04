@@ -2,7 +2,7 @@ class CreateSteps < ActiveRecord::Migration
   def self.up
     create_table :steps do |t|
       t.text :description
-      t.reference :testcase
+      t.references :testcase
 
       t.timestamps
     end
