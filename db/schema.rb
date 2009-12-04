@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(:version => 20091026210729) do
 
   create_table "steps", :force => true do |t|
     t.text     "description"
+    t.integer  "testcase_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
