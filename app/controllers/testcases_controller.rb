@@ -25,7 +25,7 @@ class TestcasesController < ApplicationController
   # GET /testcases/new.xml
   def new
     @testcase = Testcase.new
-    @testcase.steps.build
+    @testcase.teststeps.build
 
     respond_to do |format|
       format.html # new.html.erb

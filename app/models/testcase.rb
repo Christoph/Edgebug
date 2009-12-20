@@ -1,5 +1,5 @@
 class Testcase < ActiveRecord::Base
-  has_many :steps
+  has_many :teststeps
 
   def status
     stati = ["success", "failure", "pending"]
@@ -8,7 +8,7 @@ class Testcase < ActiveRecord::Base
 
   def step_attributes=(step_attributes)
     step_attributes.each do |attributes|
-      steps.build(attributes)
+      teststeps.build(attributes)
     end
   end
 end

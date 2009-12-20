@@ -1,7 +1,7 @@
 %h1
   = @testcase.title
 
-= render :partial => 'show_step', :collection => @testcase.steps
+= render :partial => 'show_step', :collection => @testcase.teststeps
 
 = link_to 'Edit', edit_testcase_path(@testcase)
 |

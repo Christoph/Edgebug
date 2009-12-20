@@ -11,10 +11,10 @@ describe Testcase do
     Testcase.create!(@valid_attributes)
   end
 
-  it "should create steps when the step_attributes are assigned" do
+  it "should create teststeps when the step_attributes are assigned" do
     testcase = Testcase.new
     testcase.step_attributes = [{:description => "desc"}, {:description => "desc2"}]
 
-    testcase.steps.length.should == 2
+    testcase.teststeps.length.should == 2
   end
 end

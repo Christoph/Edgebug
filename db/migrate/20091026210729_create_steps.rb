@@ -1,6 +1,6 @@
 class CreateSteps < ActiveRecord::Migration
   def self.up
-    create_table :steps do |t|
+    create_table :teststeps do |t|
       t.text :description
       t.references :testcase
 
@@ -9,6 +9,6 @@ class CreateSteps < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :steps
+    drop_table :teststeps
   end
 end
