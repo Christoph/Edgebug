@@ -1,0 +1,12 @@
+%p
+  %b Testcase:
+  =h @testcase_result.testcase
+
+%p
+  %b Result:
+  =h @testcase_result.result
+
+
+= link_to 'Edit', edit_testcase_result_path(@testcase_result)
+|
+= link_to 'Back', testcase_results_path
