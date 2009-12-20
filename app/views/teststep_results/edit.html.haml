@@ -1,0 +1,19 @@
+%h1 Editing teststep_result
+
+- form_for(@teststep_result) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :teststep
+    %br
+    = f.text_field :teststep
+  %p
+    = f.label :result
+    %br
+    = f.check_box :result
+
+  %p= f.submit "Update"
+
+= link_to 'Show', @teststep_result
+|
+= link_to 'Back', teststep_results_path

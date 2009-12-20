@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :teststep_results
+
   map.resources :testcase_results
 
   map.resources :testcases
