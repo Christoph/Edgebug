@@ -3,7 +3,7 @@ require 'spec_helper'
 describe TeststepResult do
   before(:each) do
     @valid_attributes = {
-      :teststep_id => ,
+      :teststep_id => 1,
       :result => false
     }
   end

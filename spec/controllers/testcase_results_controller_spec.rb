@@ -53,7 +53,7 @@ describe TestcaseResultsController do
     it "should expose a new testcase_result as @testcase_result" do
       testcase_result = Factory.build(:testcase_result)
       TestcaseResult.should_receive(:new).and_return(testcase_result)
-      get :new
+      get :new, :testcase_id => 1
       assigns[:testcase_result].should equal(testcase_result)
     end
 

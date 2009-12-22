@@ -9,6 +9,7 @@ describe TestcasesController do
   describe "responding to GET index" do
 
     it "should expose all testcases as @testcases" do
+      Testcase.should_receive(:find).with(:all).and_return([@testcase])
       get :index
       assigns[:testcases].should == [@testcase]
     end

@@ -1,0 +1,7 @@
+%h2 Step ##
+%p
+  = new_step_result.teststep.description
+%p
+  - fields_for "testcase_result[teststep_result_attributes][]", new_step_result do |f|
+    = f.text_field :result
+    = f.hidden_field :teststep_id 

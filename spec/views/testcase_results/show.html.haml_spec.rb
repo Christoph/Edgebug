@@ -9,8 +9,8 @@ describe "/testcase_results/show.html.haml" do
 
   it "should render attributes in <p>" do
     render "/testcase_results/show.html.haml"
-    response.should have_text(//)
-    response.should have_text(/als/)
+    response.should have_text(/Testcase/)
+    response.should have_text(/Result/)
   end
 end
 

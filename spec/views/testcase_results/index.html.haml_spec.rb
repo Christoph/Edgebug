@@ -9,8 +9,8 @@ describe "/testcase_results/index.html.haml" do
 
   it "should render list of testcase_results" do
     render "/testcase_results/index.html.haml"
-    response.should have_tag("tr>td", , 2)
-    response.should have_tag("tr>td", false, 2)
+    response.should have_tag("tr>td", true, 2)
+    response.should have_tag("tr>td", true, 2)
   end
 end
 

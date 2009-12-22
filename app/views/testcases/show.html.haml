@@ -6,3 +6,5 @@
 = link_to 'Edit', edit_testcase_path(@testcase)
 |
 = link_to 'Back', testcases_path
+|
+= link_to 'Run', :action => 'new', :controller => 'testcase_results', :testcase_id => @testcase.id
