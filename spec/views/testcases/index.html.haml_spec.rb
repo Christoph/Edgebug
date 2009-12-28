@@ -4,12 +4,13 @@ describe "/testcases/index.html.haml" do
   include TestcasesHelper
   
   before(:each) do
-     assigns[:testcases] = [ Factory(:testcase), Factory(:testcase), Factory(:testcase) ]
+    @testcases = [ Factory(:testcase), Factory(:testcase), Factory(:testcase) ]
+    assigns[:testcases] = @testcases
   end
 
   it "should render list of testcases" do
     render "/testcases/index.html.haml"
-    response.should have_tag("div>div", "value for title", 2)
+    response.should have_tag("div>div", @testcases[0].title, 2)
   end
 end
 

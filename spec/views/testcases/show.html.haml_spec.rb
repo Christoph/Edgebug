@@ -7,9 +7,9 @@ describe "/testcases/show.html.haml" do
     assigns[:testcase] = @testcase = Factory(:testcase)
   end
 
-  it "should render attributes in <p>" do
+  it "should render attributes in h1" do
     render "/testcases/show.html.haml"
-    response.should have_text(/value\ for\ title/)
+    response.should have_tag("h1", @testcase.title)
   end
 end
 

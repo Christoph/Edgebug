@@ -4,7 +4,9 @@ describe "/testcase_results/new.html.haml" do
   include TestcaseResultsHelper
   
   before(:each) do
-    assigns[:testcase_result] = Factory.build(:testcase_result)
+    testcase_result = Factory.build(:testcase_result)
+    testcase_result.testcase = Factory.build(:testcase)
+    assigns[:testcase_result] = testcase_result
   end
 
   it "should render new form" do

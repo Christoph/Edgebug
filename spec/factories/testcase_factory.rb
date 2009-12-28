@@ -1,3 +1,3 @@
 Factory.define :testcase do |testcase|
-  testcase.title "value for title"
+  testcase.title "My testcase title"
 end

@@ -50,10 +50,14 @@ describe TestcaseResultsController do
 
   describe "responding to GET new" do
   
-    it "should expose a new testcase_result as @testcase_result" do
+    it "should expose a new testcase_result as testcase_result" do
       testcase_result = Factory.build(:testcase_result)
+      testcase_id = 1
+
       TestcaseResult.should_receive(:new).and_return(testcase_result)
-      get :new, :testcase_id => 1
+      Testcase.should_receive(:find).with(testcase_id.to_s).and_return(Factory(:testcase))
+      get :new, :testcase_id => testcase_id 
+
       assigns[:testcase_result].should equal(testcase_result)
     end
 
