@@ -22,7 +22,6 @@ production:
   pool: 5
   username: edgebug_user
   password: megabug
-  socket: /tmp/mysql.sock
 
 cucumber:
   <<: *TEST
