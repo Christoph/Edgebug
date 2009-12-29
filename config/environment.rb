@@ -15,7 +15,7 @@ Rails::Initializer.run do |config|
   config.gem "cucumber", :version => '=0.3.104'
   config.gem "webrat", :version => '=0.5.3'
   config.gem "sqlite3-ruby", :lib => "sqlite3", :version => '=1.2.5'
-  config.gem "haml", :version => '=2.2.6'
+  config.gem "haml", :version => '=2.2.6' unless ENV["RAILS_ENV"] == "production"
   config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :version => '>= 1.2.2'
   config.gem "faker", :version => '>= 0.3.1'
   config.gem "pickle", :lib => false, :version => ">=0.1.21"
