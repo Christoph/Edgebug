@@ -7,9 +7,8 @@ class TestcaseResult < ActiveRecord::Base
       teststep_results.build(attributes)
     end
 
-    ##result = teststep_results.reduce {|sum, step_result| sum &&= step_result }
-    @result = true
-    result = false
-    save
+    self.result = teststep_results.inject(true) do |visitor, step_result|
+      visitor && step_result.result
+    end
   end
 end
