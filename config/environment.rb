@@ -1,4 +1,4 @@
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -12,13 +12,13 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem "rspec-rails", :version => '=1.2.9', :lib => 'spec/rails'
-  config.gem "cucumber", :version => '=0.3.104'
-  config.gem "webrat", :version => '=0.5.3'
-  config.gem "sqlite3-ruby", :lib => "sqlite3", :version => '=1.2.5'
-  config.gem "haml", :version => '=2.2.6' unless ENV["RAILS_ENV"] == "production"
-  config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :version => '>= 1.2.2'
+  config.gem "cucumber", :version => '=0.6.0'
+  config.gem "webrat", :version => '=0.6.0'
+  config.gem "sqlite3-ruby", :lib => "sqlite3", :version => '=1.2.5' unless ENV["RAILS_ENV"] == "production"
+  config.gem "haml", :version => '=2.2.16'
+  config.gem "factory_girl", :lib => "factory_girl", :version => '>= 1.2.3'
   config.gem "faker", :version => '>= 0.3.1'
-  config.gem "pickle", :lib => false, :version => ">=0.1.21"
+  config.gem "pickle", :lib => false, :version => ">=0.2.1"
 
   
   # Only load the plugins named here, in the order given (default is alphabetical).
