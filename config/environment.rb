@@ -12,7 +12,8 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem "rspec-rails", :version => '=1.2.9', :lib => 'spec/rails'
-  config.gem "cucumber", :version => '=0.6.0'
+  ##config.gem "cucumber", :version => '=0.6.0' causes problem with rake
+  ##config.gem "cucumber-rails", :version => '=0.2.3'
   config.gem "webrat", :version => '=0.6.0'
   config.gem "sqlite3-ruby", :lib => "sqlite3", :version => '=1.2.5' unless ENV["RAILS_ENV"] == "production"
   config.gem "haml", :version => '=2.2.16'

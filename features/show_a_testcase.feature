@@ -6,9 +6,9 @@ Feature: Show a Testcase
     | description | testcase |
     | First Step  | testcase: "t1" |
     | Second Step | testcase: "t1" |
-    And I am on the "testcases" page
+    And I am on /testcases
     When I follow "My first Testcase"
-    Then I should be on "testcases/1"
+    Then I should be on /testcases/1
     And I should see "My first Testcase"
     And I should see "First Step"
     And I should see "Second Step"
