@@ -1,7 +1,14 @@
-%h2 Step ##
-%p
-  = new_step_result.teststep.description
-%p
-  - fields_for "testcase_result[teststep_result_attributes][]", new_step_result do |f|
-    = f.text_field :result
-    = f.hidden_field :teststep_id 
+.teststep
+  %h2 Step ##
+  %p
+    = new_step_result.teststep.description
+  %p
+    - fields_for "testcase_result[teststep_result_attributes][]", new_step_result do |f|
+      = f.hidden_field :result
+      = f.hidden_field :teststep_id
+  
+    - i = "res_#{rand(1000000)}"
+    = "<a id=\"#{i}\" href=\"javascript:markItemAsSuccessful('#{i}');\">mark successful</a>"
+    = "<a id=\"#{i}\" href=\"javascript:markItemAsFailed('#{i}');\">mark failed</a>"
+
+
