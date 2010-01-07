@@ -8,7 +8,7 @@ class TestcaseResult < ActiveRecord::Base
     end
 
     self.result = teststep_results.inject(true) do |visitor, step_result|
-      visitor && step_result.result
+      visitor && (step_result.result == nil ? false : step_result.result)
     end
   end
 end
