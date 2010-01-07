@@ -1,9 +1,12 @@
 class Testcase < ActiveRecord::Base
   has_many :teststeps
 
+  named_scope :status 
   def status
-    stati = ["success", "failure", "pending"]
-    stati[rand 3]
+    testcase_result = TestcaseResult.first(select: "result", conditions: { testcase_id: self.id }, order: "created_at DESC")
+ 
+    result = testcase_result && testcase_result.result
+    { true => "success", false => "failure", nil => "pending" }[result]
   end
 
   def step_attributes=(step_attributes)
