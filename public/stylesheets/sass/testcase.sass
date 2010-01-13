@@ -9,7 +9,7 @@
   border: 
     size: 1px
     style: solid
-    color = !BASE_GREEN
+    color = !DARK_GRAY
   width: 90%
   margin: 10px auto
   padding: 7px
@@ -21,13 +21,17 @@
     float: left
     width: 70%
     margin-left: 10px
-    height: 100%
+    height: 50%
+    margin-bottom: 2px
 
   .info_cell
     float: left
     width: 25%
     margin-left: 10px
-    height: 100%
+    height: 50%
+
+  .result_cell
+    font-size: 8pt
 
   .status_cell_failure
     +status_cell
@@ -65,3 +69,6 @@
 p.remove_link
   width: 600px
   text-align: right
+  
+.bold
+  font-weight: bold

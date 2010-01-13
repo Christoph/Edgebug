@@ -2,5 +2,13 @@
   %div{ :class => "status_cell_#{testcase.status}" }
   .title_cell
     = link_to testcase.title, :action => 'show', :id => testcase
+    .result_cell
+      7 succeeded, 2 failed, 1 pending
   .info_cell
-    Info
+    %span
+      Last executed by:
+    %span.bold
+      Oliver
+    %span
+      on 5/1/2009
+  
