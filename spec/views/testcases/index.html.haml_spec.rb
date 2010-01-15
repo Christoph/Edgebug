@@ -10,7 +10,7 @@ describe "/testcases/index.html.haml" do
 
   it "should render list of testcases" do
     render "/testcases/index.html.haml"
-    response.should have_tag("div>div", @testcases[0].title, 2)
+    response.should have_tag("div>div>a", @testcases[0].title, 2)
   end
 end
 

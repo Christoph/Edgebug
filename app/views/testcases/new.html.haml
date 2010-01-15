@@ -9,11 +9,13 @@
     = f.text_field :title
 
     #steps
-      = render :partial => 'step', :collection => @testcase.teststeps
+      - f.fields_for :teststeps do |builder|
+        = render 'step', :f => builder
 
     #steps_menu
       = link_to_function "Add a step" do |page|
-        - page.insert_html :bottom, :steps, :partial => 'step', :object => Teststep.new
+        - f.fields_for :teststeps, Teststep.new do |builder|
+          - page.insert_html :bottom, :steps, :partial => 'step', :locals => { :f => builder }
 
   %p= f.submit "Create"
 

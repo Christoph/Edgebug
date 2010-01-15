@@ -1,7 +1,6 @@
 .test_step
   %h2 Step ##
-  - fields_for "testcase[step_attributes][]", step do |step_form|
-    = step_form.label :description
-    %br
-    = step_form.text_area :description
+  = f.label :description
+  %br
+  = f.text_area :description
   %p.remove_link removelink
