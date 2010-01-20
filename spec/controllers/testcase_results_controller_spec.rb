@@ -86,10 +86,10 @@ describe TestcaseResultsController do
         assigns(:testcase_result).should equal(@new_testcase_result)
       end
 
-      it "should redirect to the created testcase_result" do
+      it "should redirect to the testcases page" do
         TestcaseResult.stub!(:new).and_return(@new_testcase_result)
         post :create, :testcase_result => {}
-        response.should redirect_to(testcase_result_url(@new_testcase_result))
+        response.should redirect_to(testcases_url)
       end
       
     end

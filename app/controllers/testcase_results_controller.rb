@@ -43,7 +43,7 @@ class TestcaseResultsController < ApplicationController
     respond_to do |format|
       if @testcase_result.save
         flash[:notice] = 'TestcaseResult was successfully created.'
-        format.html { redirect_to(@testcase_result) }
+        format.html { redirect_to(testcases_url) }
         format.xml  { render :xml => @testcase_result, :status => :created, :location => @testcase_result }
       else
         format.html { render :action => "new" }
