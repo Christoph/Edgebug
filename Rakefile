@@ -13,8 +13,8 @@ Rake::Task['default'].clear #clear the task so that the db migration is really c
 
 desc "Runs feature definition tests and specification tests"
 task :default do
-	Rake::Task["gems:install"].invoke 
-	Rake::Task["db:migrate"].invoke 
+  Rake::Task["gems:install"].invoke 
+  Rake::Task["db:migrate"].invoke 
   Rake::Task["db:test:prepare"].invoke 
   Rake::Task["spec"].invoke 
   Rake::Task["cucumber"].invoke 
