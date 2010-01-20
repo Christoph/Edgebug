@@ -15,7 +15,10 @@ class TestcaseResultsController < ApplicationController
   # GET /testcase_results/1
   # GET /testcase_results/1.xml
   def show
-	redirect_to :controller => 'testcases', :action => 'index'
+    respond_to do |format|
+      format.html { redirect_to :controller => 'testcases', :action => 'index' }
+      format.xml { render :xml => @testcase_result }
+    end
   end
 
   # GET /testcase_results/new
