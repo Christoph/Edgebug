@@ -11,35 +11,37 @@ describe TestcaseResult do
   it "should create a new instance given valid attributes" do
     TestcaseResult.create!(@valid_attributes)
   end
-  
-  it "should create teststep_results when getting the attributes" do
-    testcase = TestcaseResult.create!(@valid_attributes)
 
-    testcase.teststep_result_attributes = [{"result" => "t", "teststep_id" => "1"}, {"result" => "f", "teststep_id" => "2"}]
+  describe "update_result" do
+    it "should set the result to true if all step results are true" do
+      testcase = TestcaseResult.create!(@valid_attributes)
+      testcase.teststep_results = [Factory(:teststep_result, :result => true)]
 
-    testcase.teststep_results.length.should == 2
-    first_result = testcase.teststep_results[0]
-    first_result.teststep_id.should == 1
-    first_result.result.should be_true
+      testcase.update_result
 
-    second_result = testcase.teststep_results[1]
-    second_result.teststep_id.should == 2
-    second_result.result.should be_false
-  end
+      testcase.result.should be_true
+    end
 
-  it "should save the overall result when getting the attributes" do
-    testcase = TestcaseResult.create!(@valid_attributes)
+    it "should set the result to failed if one step is pending" do
+      testcase = TestcaseResult.create!(@valid_attributes)
 
-    testcase.teststep_result_attributes = [{"result" => "t", "teststep_id"=>"1"}]
+      testcase.teststep_results = [Factory(:teststep_result, :result => true),
+        Factory(:teststep_result, :result => nil)]
 
-    testcase.result.should be_true
-  end
+      testcase.update_result
 
-  it "should set the result to failed if one step is pending" do
-    testcase = TestcaseResult.create!(@valid_attributes)
+      testcase.result.should be_false
+    end
 
-    testcase.teststep_result_attributes = [{"result" => "t", "teststep_id" => "1"}, {"result" => "", "teststep_id" => "2"}]
+    it "should set the result to failed if one step result is false" do
+      testcase = TestcaseResult.create!(@valid_attributes)
 
-    testcase.result.should be_false
+      testcase.teststep_results = [Factory(:teststep_result, :result => true),
+        Factory(:teststep_result, :result => false)]
+
+      testcase.update_result
+
+      testcase.result.should be_false
+    end
   end
 end

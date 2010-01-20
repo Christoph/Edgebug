@@ -18,7 +18,8 @@ function markItemAsFailed(id)
 
 
 - form_for(@testcase_result) do |f|
-  = render :partial => 'testcase_results/new_step_result', :collection => @testcase_result.teststep_results
+  - f.fields_for :teststep_results do |builder|
+    = render 'new_step_result', :f => builder
   = f.hidden_field :testcase_id 
-  = link_to 'Back', testcase_results_path
+  = link_to 'Back', testcases_path
   = submit_tag 'Create'
