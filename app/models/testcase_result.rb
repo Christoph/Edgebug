@@ -10,6 +10,6 @@ class TestcaseResult < ActiveRecord::Base
       visitor && (step_result.result == nil ? false : step_result.result)
     end
 
-    return true
+    return true #continue saving
   end
 end
