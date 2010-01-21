@@ -7,7 +7,7 @@
     = f.hidden_field :teststep_id
   
     - i = "res_#{rand(1000000)}"
-    = "<a id=\"#{i}\" href=\"javascript:markItemAsSuccessful('#{i}');\">mark successful</a>"
-    = "<a id=\"#{i}\" href=\"javascript:markItemAsFailed('#{i}');\">mark failed</a>"
+    = "<a id=\"successful_#{i}\" href=\"javascript:markItemAsSuccessful('#{i}');\">mark successful</a>"
+    = "<a id=\"failed_#{i}\" href=\"javascript:markItemAsFailed('#{i}');\">mark failed</a>"
 
 

@@ -2,21 +2,6 @@
 %h2
   = @testcase_result.testcase.title
 
-<script language="JavaScript">
-function markItemAsSuccessful(id)
-{
-\$(id).up(1).style.background = "#00ff00";
-\$(id).up(1).down('input').value = "t";
-}
-
-function markItemAsFailed(id)
-{
-\$(id).up(1).style.background = "#ff0000";
-\$(id).up(1).down('input').value = "f";
-}
-</script>
-
-
 - form_for(@testcase_result) do |f|
   - f.fields_for :teststep_results do |builder|
     = render 'new_step_result', :f => builder
