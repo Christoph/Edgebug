@@ -7,4 +7,4 @@
 |
 = link_to 'Back', testcases_path
 |
-= link_to 'Run', :action => 'new', :controller => 'testcase_results', :testcase_id => @testcase.id
+= link_to 'Run', new_testcase_testcase_result_path(@testcase.id)

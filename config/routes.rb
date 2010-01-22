@@ -5,9 +5,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :testcase_results
 
-  map.resources :testcases
+  map.resources :testcases, :has_many => :testcase_results
   
-  map.connect 'testcases/:testcase_id/results/new', controller: 'testcase_results', action: 'new'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
