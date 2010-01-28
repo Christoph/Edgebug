@@ -16,4 +16,12 @@ class Testcase < ActiveRecord::Base
     end
     tags << tag_models
   end
+
+  def self.search(query)
+    unless query.to_s.strip.empty?
+      find(:all, :conditions => ['title like ?', "%#{query}%"], :order => 'created_at desc')
+    else
+      find(:all, :order => 'created_at desc')
+    end
+  end
 end
