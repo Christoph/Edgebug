@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tags
+
   map.root :controller => "testcases", :action => "index"
 
   map.resources :teststep_results

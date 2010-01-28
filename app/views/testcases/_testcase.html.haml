@@ -4,12 +4,9 @@
     = link_to testcase.title, :action => 'show', :id => testcase
     .result_cell
       Filed under:
-      %span.tag
-        1.70 Build 83
-      %span.tag
-        Hotfixes
-      %span.tag
-        Probably unstable
+      - testcase.tags.each do |t|
+        %span.tag
+          = t.name
   .info_cell
     %span
       Last executed by:
