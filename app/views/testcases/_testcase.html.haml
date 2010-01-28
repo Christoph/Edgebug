@@ -3,12 +3,18 @@
   .title_cell
     = link_to testcase.title, :action => 'show', :id => testcase
     .result_cell
-      7 succeeded, 2 failed, 1 pending
+      Filed under:
+      %span.tag
+        1.70 Build 83
+      %span.tag
+        Hotfixes
+      %span.tag
+        Probably unstable
   .info_cell
     %span
       Last executed by:
     %span.bold
       Oliver
     %span
-      on 5/1/2009
+      on #{testcase.created_at.to_s(:short)}
   
