@@ -4,7 +4,8 @@ class TestcasesController < ApplicationController
   # GET /testcases
   # GET /testcases.xml
   def index
-    @testcases = Testcase.find(:all)
+    
+    @testcases = Testcase.search(params[:s])
 
     respond_to do |format|
       format.html # index.html.erb
