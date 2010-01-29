@@ -22,7 +22,7 @@ end
 
 desc "Starts the server and does necessary stuff"
 task :start => [Rake::Task['db:migrate'], :touch_logs] do
-  sh "script/server"
+  sh "ruby script/server"
 end
 
 desc "Touches the needed log files for server startup"
