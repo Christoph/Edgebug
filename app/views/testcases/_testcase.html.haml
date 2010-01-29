@@ -4,9 +4,7 @@
     = link_to testcase.title, :action => 'show', :id => testcase
     .result_cell
       Filed under:
-      - testcase.tags.each do |t|
-        %span.tag
-          = link_to t.name, tag_path(t)
+      = render partial: 'testcases/show_tags', locals: { tags: testcase.tags }
   .info_cell
     %span
       Last executed by:

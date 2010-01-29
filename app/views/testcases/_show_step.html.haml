@@ -1,2 +1,7 @@
-%p
-  = show_step.description
+- i = 0
+- teststeps.each do |s|
+  .step_description
+    .number
+      = i += 1
+    %p
+      = s.description
