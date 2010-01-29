@@ -6,7 +6,7 @@
       Filed under:
       - testcase.tags.each do |t|
         %span.tag
-          = t.name
+          = link_to t.name, tag_path(t)
   .info_cell
     %span
       Last executed by:

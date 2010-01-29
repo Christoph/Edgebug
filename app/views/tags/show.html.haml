@@ -1,7 +1,9 @@
-%p
-  %b Name:
-  =h @tag.name
+%h2
+  Showing everyting tagged 
+  %i
+    = @tag.name
 
+= render :partial => 'testcases/testcase', :collection => @tag.testcases
 
 = link_to 'Edit', edit_tag_path(@tag)
 |

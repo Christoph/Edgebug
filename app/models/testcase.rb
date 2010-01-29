@@ -1,11 +1,12 @@
 class Testcase < ActiveRecord::Base
   has_many :teststeps
   has_and_belongs_to_many :tags
+
   accepts_nested_attributes_for :teststeps, :allow_destroy => true
 
   def status
     testcase_result = TestcaseResult.first(select: "result", conditions: { testcase_id: self.id }, order: "created_at DESC")
- 
+
     result = testcase_result && testcase_result.result
     { true => "success", false => "failure", nil => "pending" }[result]
   end
@@ -18,10 +19,12 @@ class Testcase < ActiveRecord::Base
   end
 
   def self.search(query)
+    order = 'created_at desc'
     unless query.to_s.strip.empty?
-      find(:all, :conditions => ['title like ?', "%#{query}%"], :order => 'created_at desc')
+      keywords = query.split.map { |k| "%#{k}%" }
+      find(:all, :conditions => [(['title like ?']*keywords.length).join(" and "), keywords].flatten, :order => order)
     else
-      find(:all, :order => 'created_at desc')
+      find(:all, :order => order)
     end
   end
 end
