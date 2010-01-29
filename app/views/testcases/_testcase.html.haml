@@ -1,7 +1,7 @@
 .testcase_list_element
   %div{ :class => "status_cell_#{testcase.status}" }
   .title_cell
-    = link_to testcase.title, :action => 'show', :id => testcase
+    = link_to testcase.title, testcase_path(testcase)
     .result_cell
       Filed under:
       = render partial: 'testcases/show_tags', locals: { tags: testcase.tags }
