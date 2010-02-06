@@ -1,17 +1,13 @@
 %h1 Listing tags
 
-%table
-  %tr
-    %th Name
+%form
+  %input{:type => "text", :name => "s"}
+  %input{:type => :submit}
 
+
+%p this should later be ordered by usage (most used on top)
 - for tag in @tags
-  %tr
-    %td= tag.name
-
-    %td= link_to 'Show', tag
-    %td= link_to 'Edit', edit_tag_path(tag)
-    %td= link_to 'Destroy', tag, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New tag', new_tag_path
+  %div
+    1.
+    = link_to tag.name, tag
+    (used 21041 times)

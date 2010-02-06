@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.xml
   def index
-    @tags = Tag.find(:all)
+    @tags = Tag.search(params[:s])
 
     respond_to do |format|
       format.html # index.html.erb
