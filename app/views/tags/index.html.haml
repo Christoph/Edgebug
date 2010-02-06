@@ -8,10 +8,15 @@
 %p this should later be ordered by usage (most used on top)
 - i = 0
 - for tag in @tags
-  %div
-    %span.number
+  .result
+    %span.result_number
       = i += 1
-    = link_to tag.name, tag
-    (used
+    %span.result_tag
+      = link_to tag.name, tag
+    used
     = tag.testcase_ids.length
-    times)
+    times.
+    %span.result_latest_usage
+      recent usages:
+      - last_case = tag.testcases.last
+      = link_to last_case.title, last_case 
