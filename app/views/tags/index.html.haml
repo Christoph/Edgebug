@@ -6,8 +6,12 @@
 
 
 %p this should later be ordered by usage (most used on top)
+- i = 0
 - for tag in @tags
   %div
-    1.
+    %span.number
+      = i += 1
     = link_to tag.name, tag
-    (used 21041 times)
+    (used
+    = tag.testcase_ids.length
+    times)
