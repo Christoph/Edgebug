@@ -1,6 +1,10 @@
 class TagsController < ApplicationController
   before_filter :find_tag, :only => [ :show, :edit, :update, :destroy ]
 
+  add_breadcrumb "home", "/"
+  add_breadcrumb "Tags", "/tags"
+
+
   # GET /tags
   # GET /tags.xml
   def index

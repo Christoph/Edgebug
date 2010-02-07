@@ -16,6 +16,9 @@
     #main_container
       #header
         = render :partial => "layouts/header"
+      #breadcrumbs
+        = render_breadcrumbs
+        
       #content_container
         = yield :layout
       #footer
