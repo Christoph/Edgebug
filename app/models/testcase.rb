@@ -1,5 +1,6 @@
 class Testcase < ActiveRecord::Base
   has_many :teststeps
+  has_many :testcase_results
   has_and_belongs_to_many :tags
 
   accepts_nested_attributes_for :teststeps, :allow_destroy => true
@@ -12,7 +13,13 @@ class Testcase < ActiveRecord::Base
   end
 
   def last_executed_time
-    return "#### last exec time ####"
+    testcase_results = self.testcase_results
+
+    if testcase_results.length == 0
+      return "never"
+    else
+      testcase_results.last.created_at.to_s(:short)
+    end
   end
 
   def tags=(value)
