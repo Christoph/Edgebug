@@ -2,9 +2,10 @@
 %h2
   = @testcase_result.testcase.title
 
+- i = 0
 - form_for(@testcase_result) do |f|
   - f.fields_for :teststep_results do |builder|
-    = render 'new_step_result', :f => builder
+    = render 'new_step_result', {:f => builder, :i => i += 1}
   = f.hidden_field :testcase_id 
   = link_to 'Back', testcases_path
   = submit_tag 'Create'

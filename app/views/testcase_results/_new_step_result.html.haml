@@ -1,13 +1,15 @@
 .teststep
-  %h2 Step ##
+  %h2
+    Step
+    = i
   %p
     = f.object.teststep.description
   %p
     = f.hidden_field :result
     = f.hidden_field :teststep_id
   
-    - i = "res_#{rand(1000000)}"
-    = "<a id=\"successful_#{i}\" href=\"javascript:markItemAsSuccessful('#{i}');\">mark successful</a>"
-    = "<a id=\"failed_#{i}\" href=\"javascript:markItemAsFailed('#{i}');\">mark failed</a>"
+    - id = "res_#{rand(1000000)}"
+    = "<a id=\"successful_#{id}\" href=\"javascript:markItemAsSuccessful('#{id}');\">mark successful</a>"
+    = "<a id=\"failed_#{id}\" href=\"javascript:markItemAsFailed('#{id}');\">mark failed</a>"
 
 
