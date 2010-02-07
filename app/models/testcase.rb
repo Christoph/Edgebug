@@ -11,6 +11,10 @@ class Testcase < ActiveRecord::Base
     { true => "success", false => "failure", nil => "pending" }[result]
   end
 
+  def last_executed_time
+    return "#### last exec time ####"
+  end
+
   def tags=(value)
     tag_models = value.split(',').map(&:strip).map do |name|
       Tag.find(:first, :conditions => ["name='#{name}'"]) || Tag.create(:name => name)
