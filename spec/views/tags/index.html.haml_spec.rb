@@ -9,7 +9,7 @@ describe "/tags/index.html.haml" do
 
   it "should render list of tags" do
     render "/tags/index.html.haml"
-    response.should have_tag("tr>td", "value for name", 2)
+    response.should have_tag("a", "value for name", 2)
   end
 end
 

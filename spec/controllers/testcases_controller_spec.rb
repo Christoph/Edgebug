@@ -9,7 +9,7 @@ describe TestcasesController do
   describe "responding to GET index" do
 
     it "should expose all testcases as @testcases" do
-      Testcase.should_receive(:find).with(:all).and_return([@testcase])
+      Testcase.should_receive(:find).with(:all, {:order => "created_at desc"}).and_return([@testcase])
       get :index
       assigns[:testcases].should == [@testcase]
     end
@@ -18,7 +18,7 @@ describe TestcasesController do
   
       it "should render all testcases as xml" do
         request.env["HTTP_ACCEPT"] = "application/xml"
-        Testcase.should_receive(:find).with(:all).and_return(testcases = mock("Array of Testcases"))
+        Testcase.should_receive(:find).with(:all, {:order => "created_at desc"}).and_return(testcases = mock("Array of Testcases"))
         testcases.should_receive(:to_xml).and_return("generated XML")
         get :index
         response.body.should == "generated XML"

@@ -17,7 +17,7 @@ describe TagsController do
   
       it "should render all tags as xml" do
         request.env["HTTP_ACCEPT"] = "application/xml"
-        Tag.should_receive(:find).with(:all).and_return(tags = mock("Array of Tags"))
+        Tag.should_receive(:find).with(:all, {:order => "name desc"}).and_return(tags = mock("Array of Tags"))
         tags.should_receive(:to_xml).and_return("generated XML")
         get :index
         response.body.should == "generated XML"
