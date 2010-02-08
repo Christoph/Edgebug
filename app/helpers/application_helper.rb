@@ -16,10 +16,17 @@ module ApplicationHelper
     icon = args[:icon]
     url = args[:url]
     text = args[:text]
-    
+    id = args[:id]
+
+    span = "<span class=\"icon_link\""
+    if id
+      span << " id=\"#{id}\""
+    end
+    span << ">"
+
     link = "<a href=\"#{url}\" alt=\"#{text}\">"
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
     
-    "#{link}#{img}</a>&nbsp;#{link}#{text}</a>"
+    "#{span}#{link}#{img}</a>&nbsp;#{link}#{text}</a></span>"
   end
 end

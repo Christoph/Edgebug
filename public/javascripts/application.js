@@ -1,15 +1,15 @@
 function markItemAsSuccessful(id)
 {
-  id = "#successful_" + id;
+  id = 'input#' + id;
   $(id).parent().parent().attr('class', "step_description successful_teststep_result");
-  $(id).parent().children('input').value = "t";
+  $(id).val("t");
 }
 
 function markItemAsFailed(id)
 {
-  id = "#failed_" + id;
+  id = 'input#' + id;
   $(id).parent().parent().attr('class', "step_description failed_teststep_result");
-  $(id).parent().children('input').value = "f";
+  $(id).val("f");
 }
 
 function remove_fields(link)
