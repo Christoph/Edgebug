@@ -7,8 +7,14 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
 if RAILS_ENV != "production" then
+  tags = []
+  12.times { tags << Tag.create(:name => Faker::Lorem.words(1)[0]) }
+
   10.times do
     testcase = Testcase.create(:title => Faker::Lorem.words(rand(7) + 1).join(' ').capitalize)
+    rand(6).times do
+      testcase.tags << tags[rand(12)]
+    end
     rand(8).times do
       Teststep.create(:description => Faker::Lorem.paragraph, :testcase => testcase)
     end
