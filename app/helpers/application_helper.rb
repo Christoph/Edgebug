@@ -11,4 +11,15 @@ module ApplicationHelper
     end
     link_to_function(name, h("add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")"))
   end
+
+  def icon_url(args)
+    icon = args[:icon]
+    url = args[:url]
+    text = args[:text]
+    
+    link = "<a href=\"#{url}\" alt=\"#{text}\">"
+    img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
+    
+    "#{link}#{img}</a>&nbsp;#{link}#{text}</a>"
+  end
 end

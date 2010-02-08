@@ -2,8 +2,8 @@
   = @testcase.title
 = render partial: 'show_tags', locals: { tags: @testcase.tags }
 
-%h2 This case constists of
-= render :partial => 'show_step', locals: { teststeps: @testcase.teststeps }
+%h2 This case consists of
+= render partial: 'show_step', locals: { teststeps: @testcase.teststeps }
 
 = link_to 'Edit', edit_testcase_path(@testcase)
 |

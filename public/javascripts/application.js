@@ -1,14 +1,14 @@
 function markItemAsSuccessful(id)
 {
   id = "#successful_" + id;
-  $(id).parent().parent().attr('class', "successful_teststep_result");
+  $(id).parent().parent().attr('class', "step_description successful_teststep_result");
   $(id).parent().children('input').value = "t";
 }
 
 function markItemAsFailed(id)
 {
   id = "#failed_" + id;
-  $(id).parent().parent().attr('class', "failed_teststep_result");
+  $(id).parent().parent().attr('class', "step_description failed_teststep_result");
   $(id).parent().children('input').value = "f";
 }
 
