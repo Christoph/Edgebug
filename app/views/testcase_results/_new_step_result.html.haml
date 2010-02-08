@@ -1,15 +1,16 @@
-.teststep
-  %h2
-    Step
+.step_description
+  .number
     = i
   %p
     = f.object.teststep.description
   %p
     = f.hidden_field :result
     = f.hidden_field :teststep_id
-  
+
     - id = "res_#{rand(1000000)}"
-    = "<a id=\"successful_#{id}\" href=\"javascript:markItemAsSuccessful('#{id}');\">mark successful</a>"
-    = "<a id=\"failed_#{id}\" href=\"javascript:markItemAsFailed('#{id}');\">mark failed</a>"
+    
+    = icon_url icon: "tick", text: "mark successful", url: "javascript:markItemAsSuccessful('#{id}');"
+    = icon_url icon: "cross", text: "mark failed", url: "javascript:markItemAsFailed('#{id}');"
+
 
 
