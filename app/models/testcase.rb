@@ -22,16 +22,15 @@ class Testcase < ActiveRecord::Base
     end
   end
 
-  def tags=(value)
+  def tags_string=(value)
     tag_models = value.split(',').map(&:strip).map do |name|
       Tag.find(:first, :conditions => ["name='#{name}'"]) || Tag.create(:name => name)
     end
     tags << tag_models
   end
 
-  def tags
-    values = read_attribute(:tag)
-    values == [] ? "" : values
+  def tags_string
+    tags.join(", ")
   end
 
   def self.search(query)

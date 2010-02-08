@@ -4,7 +4,7 @@
     = link_to testcase.title, testcase_path(testcase)
     .result_cell
       Filed under:
-      = render partial: 'testcases/show_tags', locals: { tags: testcase.tags }
+      = render partial: 'testcases/show_tags', locals: { tags: testcase.tags } if testcase.tags
   .info_cell
     %span
       Last executed by:
