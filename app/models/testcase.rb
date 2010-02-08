@@ -29,6 +29,11 @@ class Testcase < ActiveRecord::Base
     tags << tag_models
   end
 
+  def tags
+    values = read_attribute(:tag)
+    values == [] ? "" : values
+  end
+
   def self.search(query)
     order = 'created_at desc'
     unless query.to_s.strip.empty?
