@@ -3,8 +3,8 @@ require 'spec_helper'
 describe TestsuitesTestcase do
   before(:each) do
     @valid_attributes = {
-      :testsuite => ,
-      :testcase_id => 
+      :testsuite_id => 0,
+      :testcase_id => 0
     }
   end
 
