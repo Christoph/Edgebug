@@ -1,0 +1,13 @@
+%h1 New testsuite
+
+- form_for(@testsuite) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :build
+    %br
+    = f.text_field :build
+
+  %p= f.submit "Create"
+
+= link_to 'Back', testsuites_path

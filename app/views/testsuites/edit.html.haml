@@ -1,0 +1,15 @@
+%h1 Editing testsuite
+
+- form_for(@testsuite) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :build
+    %br
+    = f.text_field :build
+
+  %p= f.submit "Update"
+
+= link_to 'Show', @testsuite
+|
+= link_to 'Back', testsuites_path

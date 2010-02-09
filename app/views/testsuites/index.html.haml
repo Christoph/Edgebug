@@ -1,0 +1,17 @@
+%h1 Listing testsuites
+
+%table
+  %tr
+    %th Build
+
+- for testsuite in @testsuites
+  %tr
+    %td= testsuite.build
+
+    %td= link_to 'Show', testsuite
+    %td= link_to 'Edit', edit_testsuite_path(testsuite)
+    %td= link_to 'Destroy', testsuite, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New testsuite', new_testsuite_path
