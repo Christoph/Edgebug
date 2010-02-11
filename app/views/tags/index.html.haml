@@ -1,10 +1,5 @@
 %h1 Listing tags
 
-%form
-  %input{:type => "text", :name => "s"}
-  %input{:type => :submit}
-
-
 %p this should later be ordered by usage (most used on top)
 - i = 0
 - for tag in @tags
@@ -13,10 +8,11 @@
       = i += 1
     %span.result_tag
       = link_to tag.name, tag
-    used
+    Used
     = tag.testcase_ids.length
     times.
     %span.result_latest_usage
-      recent usages:
       - last_case = tag.testcases.last
-      = link_to last_case.title, last_case unless last_case == nil
+      - if last_case
+        Recent usages:
+        = link_to last_case.title, last_case unless last_case == nil
