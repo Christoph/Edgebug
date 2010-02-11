@@ -1,3 +1,6 @@
-%a{href: testcases_path}
-  Edgebug
-= render :partial => 'shared/searchbox'
+#header
+  %h1
+    = link_to "Edgebug", testcases_path
+  #menu
+    = render :partial => "layouts/menu"
+  = render :partial => 'shared/searchbox'

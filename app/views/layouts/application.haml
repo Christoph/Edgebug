@@ -14,13 +14,7 @@
 
   %body
     #main_container
-      #header
-        = render :partial => "layouts/header"
-      #menu
-        = render :partial => "layouts/menu"
-      #breadcrumbs
-        = render_breadcrumbs
-
+      = render :partial => "layouts/header"
       #content_container
         = yield :layout
       #footer
