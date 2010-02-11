@@ -89,18 +89,12 @@ p.remove_link
   font-weight: bold
 
 .successful_teststep_result
-  border:
-    width: 1px
-    style: solid
-    color = !BASE_GREEN
-  background-color = !LIGHT_GREEN
+  div.status
+    background = !BASE_GREEN
 
 .failed_teststep_result
-  border:
-    width: 1px
-    style: solid
-    color = !RED
-  background-color = !LIGHT_RED
+  div.status
+    background = !RED
 
 .step_description
   border:
@@ -110,10 +104,14 @@ p.remove_link
   padding: 5px
   margin: 10px
   
+  div.status
+    width: 10px
+    height: 60px
+    float: left
+
   .number
     font-size: 18pt
     color: #aaaaaa
-    clear: both
     float: left
     margin-right: 15px
     margin-top: 12px
