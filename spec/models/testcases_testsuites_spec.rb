@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TestsuitesTestcase do
+describe TestcasesTestsuites do
   before(:each) do
     @valid_attributes = {
       :testsuite_id => 0,
@@ -9,6 +9,6 @@ describe TestsuitesTestcase do
   end
 
   it "should create a new instance given valid attributes" do
-    TestsuitesTestcase.create!(@valid_attributes)
+    TestcasesTestsuites.create!(@valid_attributes)
   end
 end
