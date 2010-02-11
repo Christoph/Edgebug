@@ -7,5 +7,5 @@
   - f.fields_for :teststep_results do |builder|
     = render 'new_step_result', {:f => builder, :i => i += 1}
   = f.hidden_field :testcase_id 
-  = icon_url icon: :arrow_left, text: 'Back', url: testcases_path
-  = icon_url icon: :disk, text: 'Save', url: "javascript:$('form').submit();"
+  = button_url icon: :arrow_left, text: 'Back', url: testcases_path
+  = button_url icon: :disk, text: 'Save', js_url: "$('form').submit();"

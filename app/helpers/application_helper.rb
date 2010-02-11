@@ -24,7 +24,36 @@ module ApplicationHelper
     end
     span << ">"
 
-    link = "<a href=\"#{url}\" alt=\"#{text}\">"
+    if url
+      link = "<a href=\"#{url}\" alt=\"#{text}\">"
+    else
+      link = "<a href=\"#\" onclick=\"#{js_url}\" alt=\"#{text}\">"
+    end
+
+    img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
+    
+    "#{span}#{link}#{img}</a>&nbsp;#{link}#{text}</a></span>"
+  end
+  
+  def button_url(args)
+    icon = args[:icon]
+    url = args[:url]
+    text = args[:text]
+    id = args[:id]
+    js_url = args[:js_url]
+
+    span = "<span class=\"button_link\""
+    if id
+      span << " id=\"#{id}\""
+    end
+    span << ">"
+
+    if url
+      link = "<a href=\"#{url}\" alt=\"#{text}\">"
+    else
+      link = "<a href=\"#\" onclick=\"javascript:#{js_url}\" alt=\"#{text}\">"
+    end
+
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
     
     "#{span}#{link}#{img}</a>&nbsp;#{link}#{text}</a></span>"
