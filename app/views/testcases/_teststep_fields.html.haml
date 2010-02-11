@@ -1,6 +1,8 @@
-.test_step
-  %h2 Step ##
-  = f.label :description
+.step_description
+  .number 1
+  .remove_link
+    remove
+  -#= f.label :description
   %br
-  = f.text_area :description
-  %p.remove_link removelink
+  = f.text_area :description, rows: 3, class: "test_step_text"
+  -#%p.remove_link removelink
