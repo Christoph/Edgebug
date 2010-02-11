@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20100209194028) do
     t.datetime "updated_at"
   end
 
-  create_table "testsuites_testcases", :id => false, :force => true do |t|
+  create_table "testcases_testsuites", :id => false, :force => true do |t|
     t.integer  "testsuite_id"
     t.integer  "testcase_id"
     t.datetime "created_at"

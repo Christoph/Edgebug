@@ -1,4 +1,4 @@
-class CreateTestsuitesTestcases < ActiveRecord::Migration
+class CreateTestcasesTestsuites < ActiveRecord::Migration
   def self.up
     create_table :testcases_testsuites, :id => false do |t|
       t.references :testsuite
