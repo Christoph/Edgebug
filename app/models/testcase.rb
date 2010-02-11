@@ -29,6 +29,29 @@ class Testcase < ActiveRecord::Base
     end
     tags << tag_models
   end
+  
+  def prev_in(testsuite)
+    cases = testsuite.testcases
+
+    i = cases.index(self)
+    return nil if i == nil
+    
+    i -= 1
+    return nil if i < 0
+
+    return cases[i]
+  end
+  
+  def next_in(testsuite)
+    cases = testsuite.testcases
+
+    i = cases.index(self)
+    return nil if i == nil
+    
+    i += 1
+
+    return cases[i]
+  end
 
   def tags_string
     tags.join(", ")
