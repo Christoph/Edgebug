@@ -2,7 +2,8 @@ class Testcase < ActiveRecord::Base
   has_many :teststeps
   has_many :testcase_results
   has_and_belongs_to_many :tags
-
+  has_and_belongs_to_many :testsuites
+  
   accepts_nested_attributes_for :teststeps, :allow_destroy => true
 
   def status

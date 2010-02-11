@@ -1,6 +1,6 @@
 class CreateTestsuitesTestcases < ActiveRecord::Migration
   def self.up
-    create_table :testsuites_testcases, :id => false do |t|
+    create_table :testcases_testsuites, :id => false do |t|
       t.references :testsuite
       t.references :testcase
 
@@ -9,6 +9,6 @@ class CreateTestsuitesTestcases < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :testsuites_testcases
+    drop_table :testcases_testsuites
   end
 end

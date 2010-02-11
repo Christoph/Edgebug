@@ -19,4 +19,10 @@ if RAILS_ENV != "production" then
       Teststep.create(:description => Faker::Lorem.paragraph, :testcase => testcase)
     end
   end
+  
+  s = Testsuite.create
+  s.build = "ASDF"
+  
+  s.testcases << Testcase.find(1)
+  s.testcases << Testcase.find(2)
 end
