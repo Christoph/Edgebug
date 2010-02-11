@@ -1,3 +1,3 @@
-class TestsuitesTestcase < ActiveRecord::Base
+class TestcasesTestsuites < ActiveRecord::Base
   belongs_to :testcase
 end
