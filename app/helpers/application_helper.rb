@@ -17,6 +17,7 @@ module ApplicationHelper
     url = args[:url]
     text = args[:text]
     id = args[:id]
+    js_url = args[:js_url]
 
     span = "<span class=\"icon_link\""
     if id
