@@ -4,7 +4,11 @@
   .step_description{ onmouseover: "javascript:$('#lnk_#{id}').show();", onmouseout: "javascript:$('#lnk_#{id}').hide();" }
     .number
       = i += 1
-    %p
-      = s.description
+    %form{ id: "desc_#{id}" }
+      %input{ type: :hidden, name: 'step_id', value: s.id }
+
+      %p
+        = s.description
+
     .edit_step_link{ id: "lnk_#{id}" }
-      = icon_url icon: :pencil, text: 'Edit this step', url: '#'
+      = icon_url icon: :pencil, text: 'Edit this step', js_url: "test_step_to_inputs('#{id}');"

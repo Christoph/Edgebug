@@ -24,3 +24,14 @@ function add_fields(link, association, content)
   var regexp = new RegExp("new_" + association, "g");
   $(link).parent().before(content.replace(regexp, new_id));
 }
+
+function test_step_to_inputs(id)
+{
+  var p = $('#desc_'+id).children('p');
+  var t = p.text();
+
+  p.hide();
+
+  $('<textarea name="step_description">'+t+'</textarea>').insertAfter(p);
+  $('#lnk_'+id).html('');
+}
