@@ -1,0 +1,4 @@
+#page_menu
+  = button_url icon: :arrow_left, text: 'Overview', url: testcases_path
+  = button_url icon: :cog_go, text: 'Run', url: new_testcase_testcase_result_path(@testcase.id)
+  = button_url icon: :arrow_branch, text: 'Derive from this case', url: '#'

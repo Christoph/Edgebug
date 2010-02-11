@@ -5,6 +5,4 @@
 %h2 This case consists of
 = render partial: 'show_step', locals: { teststeps: @testcase.teststeps }
 
-
-= button_url icon: :arrow_left, text: 'Overview', url: testcases_path
-= button_url icon: :cog_go, text: 'Run', url: new_testcase_testcase_result_path(@testcase.id)
+= render partial: 'show_page_menu'

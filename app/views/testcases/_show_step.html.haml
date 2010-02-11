@@ -1,7 +1,10 @@
 - i = 0
 - teststeps.each do |s|
-  .step_description
+  - id = rand(1000000)
+  .step_description{ onmouseover: "javascript:$('#lnk_#{id}').show();", onmouseout: "javascript:$('#lnk_#{id}').hide();" }
     .number
       = i += 1
     %p
       = s.description
+    .edit_step_link{ id: "lnk_#{id}" }
+      = icon_url icon: :pencil, text: 'Edit this step', url: '#'
