@@ -1,10 +1,6 @@
 class TestcasesController < ApplicationController
   before_filter :find_testcase, :only => [ :show, :edit, :update, :destroy ]
 
-  add_breadcrumb "home", "/"
-  add_breadcrumb "Testcases", "/testcases"
-
-
   # GET /testcases
   # GET /testcases.xml
   def index
