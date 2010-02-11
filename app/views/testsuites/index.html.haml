@@ -6,11 +6,7 @@
 
 - for testsuite in @testsuites
   %tr
-    %td= testsuite.build
-
-    %td= link_to 'Show', testsuite
-    %td= link_to 'Edit', edit_testsuite_path(testsuite)
-    %td= link_to 'Destroy', testsuite, :confirm => 'Are you sure?', :method => :delete
+    %td= link_to testsuite.build, testsuite
 
 %br
 

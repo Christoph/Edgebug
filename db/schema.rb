@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(:version => 20100209194028) do
     t.datetime "updated_at"
   end
 
+  create_table "testcases_testsuites", :id => false, :force => true do |t|
+    t.integer  "testsuite_id"
+    t.integer  "testcase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "teststep_results", :force => true do |t|
     t.integer  "teststep_id"
     t.integer  "testcase_result_id"
@@ -54,13 +61,6 @@ ActiveRecord::Schema.define(:version => 20100209194028) do
 
   create_table "testsuites", :force => true do |t|
     t.string   "build"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "testcases_testsuites", :id => false, :force => true do |t|
-    t.integer  "testsuite_id"
-    t.integer  "testcase_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

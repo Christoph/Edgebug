@@ -1,7 +1,8 @@
-%p
-  %b Build:
-  =h @testsuite.build
+%h1= @testsuite.build
 
+%h2 This suite consists of
+- for testcase in @testsuite.testcases
+  = render partial: "testcases/testcase", locals: { testcase: testcase }
 
 = link_to 'Edit', edit_testsuite_path(@testsuite)
 |
