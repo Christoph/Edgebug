@@ -1,0 +1,6 @@
+= form_remote_tag(:url => {:action => 'create'}, :update => "subject_list", :position => :bottom, :html => {:id => 'subject_form'}) do 
+  = text_area "step_description"
+  = submit_tag 'Add' 
+
+%textarea{value: "asdfASDF"}
+= link_to_remote "Blah", :url => {action: "render_step", step_id: 5}
