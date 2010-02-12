@@ -26,7 +26,7 @@ module ApplicationHelper
     span << ">"
 
     if url
-      link = "<a href=\"#{url}\" alt=\"#{text}\">"
+      link = "<a href=\"#{url}\" title=\"#{text}\">"
     else
       link = "<a href=\"#\" onclick=\"#{js_url}\" alt=\"#{text}\">"
     end
@@ -50,7 +50,7 @@ module ApplicationHelper
     span << ">"
 
     if url
-      link = "<a href=\"#{url}\" alt=\"#{text}\">"
+      link = "<a href=\"#{url}\" title=\"#{text}\">"
     else
       link = "<a href=\"#\" onclick=\"javascript:#{js_url}\" alt=\"#{text}\">"
     end
