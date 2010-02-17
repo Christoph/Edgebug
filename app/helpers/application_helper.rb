@@ -33,7 +33,7 @@ module ApplicationHelper
 
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
     
-    "#{span}#{link}#{img}</a>&nbsp;#{link}#{text}</a></span>"
+    "#{span}#{link}#{img}</a>#{link}#{text}</a></span>"
   end
   
   def button_url(args)
@@ -57,6 +57,6 @@ module ApplicationHelper
 
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
     
-    "#{span}#{link}#{img}</a>&nbsp;#{link}#{text}</a></span>"
+    "#{span}#{link}#{img}</a>#{link}#{text}</a></span>"
   end
 end
