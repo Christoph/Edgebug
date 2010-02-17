@@ -1,2 +1,6 @@
 = link_to 'New testcase', new_testcase_path
-= render :partial => 'testcase', :collection => @testcases
+
+= form_tag 'testsuites/add_testcases', method: :post do
+  = render partial: 'testcase', collection: @testcases
+  = select "testsuite", "testsuite_id", Testsuite.find(:all).collect { |e| [e.build, e.id] }
+  = submit_tag "Add"

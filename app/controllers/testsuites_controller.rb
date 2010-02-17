@@ -79,6 +79,15 @@ class TestsuitesController < ApplicationController
     end
   end
 
+  def add_testcases
+    # get suite and cases
+    # add cases to suite
+    # redirect to suite/id
+    respond_to do |format|
+      format.html { redirect_to(testsuites_url) }
+    end
+  end
+
   private
 
   def find_testsuite
