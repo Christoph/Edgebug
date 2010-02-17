@@ -6,8 +6,10 @@ class Testcase < ActiveRecord::Base
   
   accepts_nested_attributes_for :teststeps, :allow_destroy => true
 
-  def status
-    testcase_result = TestcaseResult.first(select: "result", conditions: { testcase_id: self.id }, order: "created_at DESC")
+  def status(testsuite)
+    conditions = { testcase_id: self.id }
+    conditions[:testsuite_id] = testsuite.id if testsuite
+    testcase_result = TestcaseResult.first(select: "result", conditions: conditions, order: "created_at DESC")
 
     result = testcase_result && testcase_result.result
     { true => "success", false => "failure", nil => "pending" }[result]

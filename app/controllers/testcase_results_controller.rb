@@ -43,7 +43,10 @@ class TestcaseResultsController < ApplicationController
   # POST /testcase_results
   # POST /testcase_results.xml
   def create
-    @testcase_result = TestcaseResult.new(params[:testcase_result])
+    attributes = params[:testcase_result]
+    attributes[:testcase_id] = params[:testcase_id]
+    attributes[:testsuite_id] = params[:testsuite_id]
+    @testcase_result = TestcaseResult.new(attributes)
 
     respond_to do |format|
       if @testcase_result.save
