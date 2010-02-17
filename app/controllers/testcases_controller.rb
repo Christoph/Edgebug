@@ -81,6 +81,11 @@ class TestcasesController < ApplicationController
     end
   end
 
+  def render_step(step_id)
+    step = Teststep.find(step_id)
+    render partial: "show_single_step", locals: {step: step, i: i}
+  end
+
   private
 
   def find_testcase
