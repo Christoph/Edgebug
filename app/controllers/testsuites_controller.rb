@@ -80,8 +80,14 @@ class TestsuitesController < ApplicationController
   end
 
   def add_testcases
-    # get suite and cases
-    # add cases to suite
+    testsuite_id = params[:testsuite][:id]
+    testsuite = Testsuite.find(testsuite_id)
+    cases = []
+    params[:testcase_id].each do |c|
+      cases << Testcase.find(c)
+    end
+    testsuite.testcases << cases
+
     # redirect to suite/id
     respond_to do |format|
       format.html { redirect_to(testsuites_url) }
