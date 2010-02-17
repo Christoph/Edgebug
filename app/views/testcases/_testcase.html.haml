@@ -5,6 +5,7 @@
   .title_cell
     = link_to testcase.title, testcase_path(testcase)
     .result_cell
+      = icon_url icon: :cog_go, text: "Run", url: new_testcase_testcase_result_path(testcase.id)
       Filed under:
       = render partial: 'testcases/show_tags', locals: { tags: testcase.tags } if testcase.tags
   .info_cell

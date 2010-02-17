@@ -1,12 +1,8 @@
 %h1 Listing testsuites
 
-%table
-  %tr
-    %th Build
-
-- for testsuite in @testsuites
-  %tr
-    %td= link_to testsuite.build, testsuite
+%ul
+  - for testsuite in @testsuites
+    %li= link_to testsuite.build, testsuite
 
 %br
 
