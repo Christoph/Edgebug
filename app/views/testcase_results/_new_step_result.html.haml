@@ -10,5 +10,5 @@
     = f.hidden_field :result, id: id
     = f.hidden_field :teststep_id
 
-    = icon_url icon: "tick", text: "mark successful", js_url: "javascript:markItemAsSuccessful('#{id}');"
-    = icon_url icon: "cross", text: "mark failed", js_url: "javascript:markItemAsFailed('#{id}');"
+    = icon_url icon: "tick", text: "mark successful", js_url: "markItemAsSuccessful('#{id}');"
+    = icon_url icon: "cross", text: "mark failed", js_url: "markItemAsFailed('#{id}');"

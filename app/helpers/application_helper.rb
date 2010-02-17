@@ -28,7 +28,7 @@ module ApplicationHelper
     if url
       link = "<a href=\"#{url}\" title=\"#{text}\">"
     else
-      link = "<a href=\"#\" onclick=\"#{js_url}\" alt=\"#{text}\">"
+      link = "<a href=\"#\" onclick=\"javascript:#{js_url} return false;\" alt=\"#{text}\">"
     end
 
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
@@ -52,7 +52,7 @@ module ApplicationHelper
     if url
       link = "<a href=\"#{url}\" title=\"#{text}\">"
     else
-      link = "<a href=\"#\" onclick=\"javascript:#{js_url}\" alt=\"#{text}\">"
+      link = "<a href=\"#\" onclick=\"javascript:#{js_url} return false;\" alt=\"#{text}\">"
     end
 
     img = "<img src=\"/images/#{icon}.png\" alt=\"#{text}\" class=\"icon\" />"
