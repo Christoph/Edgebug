@@ -1,5 +1,7 @@
 .testcase_list_element
   %div{ :class => "status_cell_#{testcase.status}" }
+  .checkbox_cell
+    = check_box_tag "testcase", testcase.id
   .title_cell
     = link_to testcase.title, testcase_path(testcase)
     .result_cell
@@ -12,4 +14,3 @@
       Junther
     %span
       on #{testcase.last_executed_time}
-  
