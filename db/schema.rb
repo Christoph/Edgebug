@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20100209194028) do
 
   create_table "testcase_results", :force => true do |t|
     t.integer  "testcase_id"
+    t.integer  "testsuite_id"
     t.boolean  "result"
     t.datetime "created_at"
     t.datetime "updated_at"

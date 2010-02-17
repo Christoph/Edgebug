@@ -6,7 +6,7 @@ class TestcasesController < ApplicationController
   def index
     
     @testcases = Testcase.search(params[:s])
-
+    @testsuite = params[:testsuite]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @testcases }
@@ -16,6 +16,8 @@ class TestcasesController < ApplicationController
   # GET /testcases/1
   # GET /testcases/1.xml
   def show
+    @testsuite = params[:testsuite]
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @testcase }
