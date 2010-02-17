@@ -1,4 +1,4 @@
 .searchbox
-  %form{ method: "GET" }
-    %input{ type: "text", name: "s", id: "searchtext", value: params[:s]}
-    %input{ type: "submit", id: "searchbutton", value: "Go"}
+  - form_tag "", :method => :get do |f|
+    = text_field_tag "s", "", id: "searchtext"
+    = submit_tag "Go", name: nil
