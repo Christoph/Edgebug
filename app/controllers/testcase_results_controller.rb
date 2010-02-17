@@ -25,9 +25,11 @@ class TestcaseResultsController < ApplicationController
   # GET /testcase_results/new.xml
   def new
     @testcase_result = TestcaseResult.new
-    testcase = Testcase.find(params[:testcase_id])
-    @testcase_result.testcase = testcase
-    testcase.teststeps.map {|x| @testcase_result.teststep_results.build(:teststep => x, :testcase_result => @testcase_result) }
+    @testcase = Testcase.find(params[:testcase_id])
+    @testcase_result.testcase = @testcase
+    @testsuite = Testsuite.find(params[:testsuite_id])
+
+    @testcase.teststeps.map {|x| @testcase_result.teststep_results.build(:teststep => x, :testcase_result => @testcase_result) }
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @testcase_result }
@@ -46,7 +48,7 @@ class TestcaseResultsController < ApplicationController
     respond_to do |format|
       if @testcase_result.save
         flash[:notice] = 'TestcaseResult was successfully created.'
-        format.html { redirect_to(testcases_url) }
+        format.html { redirect_to(Testsuite.find(params[:testsuite_id])) }
         format.xml  { render :xml => @testcase_result, :status => :created, :location => @testcase_result }
       else
         format.html { render :action => "new" }
